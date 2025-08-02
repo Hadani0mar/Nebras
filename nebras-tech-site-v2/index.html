@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نبراس التقنية - Nebras Tech | حلول برمجية متطورة في سبها، ليبيا</title>
+    <meta name="description" content="نبراس التقنية - شركة رائدة في تقديم الحلول البرمجية والمنظومات التقنية المتطورة في سبها، ليبيا. نقدم أنظمة المبيعات والمخازن والمدارس والأتمتة وتصميم المواقع.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'arabic': ['Noto Sans Arabic', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        'nebras': {
+                            'dark': '#0f172a',
+                            'navy': '#1e40af', 
+                            'blue': '#3b82f6',
+                            'violet': '#7c3aed',
+                            'gold': '#f59e0b',
+                            'emerald': '#059669',
+                            'slate': '#64748b'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-arabic bg-gradient-to-br from-slate-50 to-blue-50 text-gray-900 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-xl shadow-lg z-50 border-b border-white/20" id="navbar">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <div class="relative">
+                        <img src="images/nebras_tech_icon.png" alt="نبراس التقنية" class="h-12 w-12 rounded-xl shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-r from-nebras-violet to-nebras-blue rounded-xl opacity-20"></div>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold bg-gradient-to-r from-nebras-dark to-nebras-violet bg-clip-text text-transparent">نبراس التقنية</h1>
+                        <p class="text-sm text-nebras-slate font-inter">Nebras Tech</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                    <a href="#home" class="nav-link relative text-gray-700 hover:text-nebras-violet transition-all duration-300 font-medium">الرئيسية</a>
+                    <a href="#about" class="nav-link relative text-gray-700 hover:text-nebras-violet transition-all duration-300 font-medium">من نحن</a>
+                    <a href="#services" class="nav-link relative text-gray-700 hover:text-nebras-violet transition-all duration-300 font-medium">خدماتنا</a>
+                    <a href="#products" class="nav-link relative text-gray-700 hover:text-nebras-violet transition-all duration-300 font-medium">منتجاتنا</a>
+                    <a href="#contact" class="nav-link relative text-gray-700 hover:text-nebras-violet transition-all duration-300 font-medium">تواصل معنا</a>
+                    <button class="bg-gradient-to-r from-nebras-violet to-nebras-blue text-white px-8 py-3 rounded-2xl hover:shadow-xl hover:scale-105 transition-all duration-300 font-semibold">
+                        احصل على عرض
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-700 hover:text-nebras-violet transition-colors" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden" id="mobile-menu">
+                <div class="py-6 space-y-4 border-t border-gray-200">
+                    <a href="#home" class="block text-gray-700 hover:text-nebras-violet transition-colors py-2">الرئيسية</a>
+                    <a href="#about" class="block text-gray-700 hover:text-nebras-violet transition-colors py-2">من نحن</a>
+                    <a href="#services" class="block text-gray-700 hover:text-nebras-violet transition-colors py-2">خدماتنا</a>
+                    <a href="#products" class="block text-gray-700 hover:text-nebras-violet transition-colors py-2">منتجاتنا</a>
+                    <a href="#contact" class="block text-gray-700 hover:text-nebras-violet transition-colors py-2">تواصل معنا</a>
+                    <button class="w-full bg-gradient-to-r from-nebras-violet to-nebras-blue text-white px-6 py-3 rounded-2xl hover:shadow-xl transition-all duration-300 font-semibold mt-4">
+                        احصل على عرض
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-violet-50"></div>
+        <div class="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-nebras-violet/20 to-nebras-blue/20 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-nebras-gold/20 to-nebras-emerald/20 rounded-full blur-3xl animate-float" style="animation-delay: -3s;"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <h1 class="text-6xl lg:text-7xl font-black leading-tight">
+                            <span class="bg-gradient-to-r from-nebras-dark via-nebras-violet to-nebras-blue bg-clip-text text-transparent">نبراس التقنية</span>
+                        </h1>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-nebras-gold">
+                            يضيء طريق المستقبل الرقمي
+                        </h2>
+                        <p class="text-xl text-gray-600 leading-relaxed max-w-2xl">
+                            شركة رائدة في تقديم الحلول البرمجية المتطورة والمنظومات التقنية الذكية في سبها، ليبيا. 
+                            نحن نجمع بين التراث الأصيل والتكنولوجيا الحديثة لنقدم لك أفضل الحلول التقنية.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <button class="group bg-gradient-to-r from-nebras-violet to-nebras-blue text-white px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3 space-x-reverse">
+                            <i class="fas fa-rocket text-xl group-hover:animate-bounce"></i>
+                            <span>ابدأ مشروعك الآن</span>
+                        </button>
+                        <button class="group border-2 border-nebras-violet text-nebras-violet px-10 py-5 rounded-2xl font-bold text-lg hover:bg-nebras-violet hover:text-white transition-all duration-300 flex items-center justify-center space-x-3 space-x-reverse">
+                            <i class="fas fa-play text-lg group-hover:animate-pulse"></i>
+                            <span>شاهد أعمالنا</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-8 pt-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-nebras-violet">150+</div>
+                            <div class="text-sm text-gray-600 font-medium">مشروع مكتمل</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-nebras-gold">95%</div>
+                            <div class="text-sm text-gray-600 font-medium">رضا العملاء</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-nebras-emerald">24/7</div>
+                            <div class="text-sm text-gray-600 font-medium">دعم تقني</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
+                        <img src="images/software_engineer_hq.png" alt="مهندس برمجيات" class="w-full h-auto rounded-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-nebras-violet/10 to-transparent rounded-3xl"></div>
+                    </div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-6 -right-6 bg-gradient-to-r from-nebras-gold to-amber-400 p-4 rounded-2xl shadow-xl animate-float">
+                        <i class="fas fa-code text-white text-2xl"></i>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-gradient-to-r from-nebras-emerald to-green-400 p-4 rounded-2xl shadow-xl animate-float" style="animation-delay: -2s;">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gradient-to-b from-white to-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black text-nebras-dark mb-6">خدماتنا المتخصصة</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    نقدم مجموعة شاملة من الحلول التقنية المتطورة المصممة خصيصاً لتلبية احتياجات الأعمال الحديثة
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- أنظمة المبيعات -->
+                <div class="group relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-nebras-emerald/5 to-nebras-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="bg-gradient-to-r from-nebras-emerald to-green-400 p-4 rounded-2xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-cash-register text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-nebras-dark mb-4">أنظمة المبيعات</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            أنظمة نقاط البيع الذكية مع إدارة المخزون والفواتير والتقارير المالية التفصيلية. 
+                            تتضمن ميزات الدفع الإلكتروني وإدارة العملاء والولاء.
+                        </p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-emerald"></i>
+                                <span>نقاط البيع الذكية</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-emerald"></i>
+                                <span>إدارة المخزون التلقائية</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-emerald"></i>
+                                <span>تقارير مالية شاملة</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- أنظمة المخازن -->
+                <div class="group relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-nebras-blue/5 to-nebras-violet/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="bg-gradient-to-r from-nebras-blue to-blue-400 p-4 rounded-2xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-warehouse text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-nebras-dark mb-4">أنظمة المخازن</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            حلول إدارة المخازن المتطورة مع تتبع المنتجات بالباركود، إدارة المواقع، 
+                            والتحكم في مستويات المخزون مع التنبيهات الذكية.
+                        </p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-blue"></i>
+                                <span>تتبع بالباركود والـ QR</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-blue"></i>
+                                <span>إدارة المواقع والأرفف</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-blue"></i>
+                                <span>تنبيهات المخزون الذكية</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- أنظمة المدارس -->
+                <div class="group relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-nebras-violet/5 to-nebras-gold/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="bg-gradient-to-r from-nebras-violet to-purple-400 p-4 rounded-2xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-graduation-cap text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-nebras-dark mb-4">أنظمة المدارس</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            منصة تعليمية شاملة لإدارة الطلاب والمعلمين والمناهج مع نظام الدرجات، 
+                            الحضور والغياب، والتواصل مع أولياء الأمور.
+                        </p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-violet"></i>
+                                <span>إدارة الطلاب والمعلمين</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-violet"></i>
+                                <span>نظام الدرجات والتقييم</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-violet"></i>
+                                <span>بوابة أولياء الأمور</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- الأتمتة والذكاء الاصطناعي -->
+                <div class="group relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-nebras-gold/5 to-amber-400/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="bg-gradient-to-r from-nebras-gold to-amber-400 p-4 rounded-2xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-robot text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-nebras-dark mb-4">الأتمتة الذكية</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            حلول الأتمتة المتطورة التي تسهل العمليات التجارية وتوفر الوقت والجهد. 
+                            تشمل أتمتة المهام المتكررة وتحليل البيانات بالذكاء الاصطناعي.
+                        </p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-gold"></i>
+                                <span>أتمتة العمليات التجارية</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-gold"></i>
+                                <span>تحليل البيانات بالذكاء الاصطناعي</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-nebras-gold"></i>
+                                <span>التقارير التلقائية</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- تصميم المواقع -->
+                <div class="group relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-rose-400/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="bg-gradient-to-r from-pink-500 to-rose-400 p-4 rounded-2xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-palette text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-nebras-dark mb-4">تصميم المواقع</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            تصميم وتطوير مواقع ويب عصرية ومتجاوبة مع جميع الأجهزة. 
+                            نركز على تجربة المستخدم والأداء العالي مع تحسين محركات البحث.
+                        </p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-pink-500"></i>
+                                <span>تصميم متجاوب وعصري</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-pink-500"></i>
+                                <span>تحسين محركات البحث</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-pink-500"></i>
+                                <span>أداء عالي وسرعة تحميل</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- الدعم التقني -->
+                <div class="group relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-orange-400/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="bg-gradient-to-r from-red-500 to-orange-400 p-4 rounded-2xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-headset text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-nebras-dark mb-4">الدعم التقني</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            دعم تقني متواصل على مدار الساعة مع فريق من الخبراء المتخصصين. 
+                            نضمن استمرارية عمل أنظمتك بأعلى كفاءة وأمان.
+                        </p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-red-500"></i>
+                                <span>دعم 24/7 متواصل</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-red-500"></i>
+                                <span>صيانة دورية ووقائية</span>
+                            </li>
+                            <li class="flex items-center space-x-3 space-x-reverse">
+                                <i class="fas fa-check-circle text-red-500"></i>
+                                <span>تدريب شامل للمستخدمين</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gradient-to-b from-slate-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black text-nebras-dark mb-6">من نحن</h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    نبراس التقنية هي شركة ليبية رائدة في مجال التكنولوجيا، تأسست برؤية واضحة لتكون الجسر 
+                    بين التراث الأصيل والتقنيات الحديثة، لنقدم حلولاً تقنية مبتكرة تلبي احتياجات السوق المحلي والإقليمي.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-nebras-violet to-purple-400 p-6 rounded-3xl w-fit mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                        <i class="fas fa-eye text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-nebras-dark mb-6">رؤيتنا</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        أن نكون الشركة الرائدة في مجال التكنولوجيا في ليبيا والمنطقة، ونساهم في التحول الرقمي 
+                        للمؤسسات والشركات بحلول مبتكرة وموثوقة تجمع بين الأصالة والحداثة.
+                    </p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-nebras-gold to-amber-400 p-6 rounded-3xl w-fit mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                        <i class="fas fa-bullseye text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-nebras-dark mb-6">مهمتنا</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        تقديم حلول برمجية متطورة وخدمات تقنية عالية الجودة تلبي احتياجات عملائنا المتنوعة، 
+                        وتساعدهم على تحقيق أهدافهم التجارية بكفاءة وفعالية عالية.
+                    </p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-nebras-emerald to-green-400 p-6 rounded-3xl w-fit mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                        <i class="fas fa-gem text-white text-4xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-nebras-dark mb-6">قيمنا</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        الجودة، الابتكار، الشفافية، والالتزام بالمواعيد. نؤمن بأهمية بناء علاقات 
+                        طويلة الأمد مع عملائنا قائمة على الثقة والاحترام المتبادل والتميز في الأداء.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-24 bg-gradient-to-b from-white to-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black text-nebras-dark mb-6">منتجاتنا المميزة</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    منتجات برمجية جاهزة ومتطورة مصممة خصيصاً لتلبية احتياجات مختلف القطاعات والأعمال
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-nebras-emerald to-green-400 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/business_analytics_hq.png" alt="نظام إدارة الأعمال" class="h-40 w-auto z-10 group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-nebras-dark mb-4">نظام إدارة الأعمال</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            نظام شامل ومتكامل لإدارة جميع عمليات الشركة من المحاسبة والمالية إلى إدارة الموارد البشرية والمشاريع
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-nebras-emerald">ابتداءً من 5000 د.ل</span>
+                            <button class="bg-gradient-to-r from-nebras-emerald to-green-400 text-white px-6 py-3 rounded-xl hover:shadow-lg transition-all duration-300 font-semibold">
+                                تفاصيل أكثر
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-nebras-gold to-amber-400 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/setup_wizard_hq.png" alt="نظام نقاط البيع" class="h-40 w-auto z-10 group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-nebras-dark mb-4">نظام نقاط البيع</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            نظام متطور وسهل الاستخدام لإدارة المبيعات والمخزون مع واجهة تفاعلية وميزات متقدمة للتجارة الحديثة
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-nebras-gold">ابتداءً من 3000 د.ل</span>
+                            <button class="bg-gradient-to-r from-nebras-gold to-amber-400 text-white px-6 py-3 rounded-xl hover:shadow-lg transition-all duration-300 font-semibold">
+                                تفاصيل أكثر
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-nebras-violet to-purple-400 flex items-center justify-center relative overflow-hidden">
+                        <img src="images/business_decisions_hq.png" alt="نظام إدارة المدارس" class="h-40 w-auto z-10 group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-nebras-dark mb-4">نظام إدارة المدارس</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            حل شامل ومتكامل لإدارة المؤسسات التعليمية من تسجيل الطلاب وإدارة المناهج إلى نظام الدرجات والتقييم
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-nebras-violet">ابتداءً من 4000 د.ل</span>
+                            <button class="bg-gradient-to-r from-nebras-violet to-purple-400 text-white px-6 py-3 rounded-xl hover:shadow-lg transition-all duration-300 font-semibold">
+                                تفاصيل أكثر
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gradient-to-b from-slate-50 to-nebras-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black text-nebras-dark mb-6">تواصل معنا</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    نحن هنا لمساعدتك في تحقيق أهدافك التقنية. تواصل معنا اليوم للحصول على استشارة مجانية ومناقشة مشروعك
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-bold text-nebras-dark mb-8">معلومات التواصل</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-6 space-x-reverse group">
+                            <div class="bg-gradient-to-r from-nebras-violet to-purple-400 p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-nebras-dark text-lg">العنوان</h4>
+                                <p class="text-gray-600">سبها، ليبيا</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-6 space-x-reverse group">
+                            <div class="bg-gradient-to-r from-nebras-emerald to-green-400 p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                                <i class="fas fa-phone text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-nebras-dark text-lg">الهاتف</h4>
+                                <p class="text-gray-600" dir="ltr">+218 XX XXX XXXX</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-6 space-x-reverse group">
+                            <div class="bg-gradient-to-r from-nebras-gold to-amber-400 p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-nebras-dark text-lg">البريد الإلكتروني</h4>
+                                <p class="text-gray-600" dir="ltr">info@nebrastech.ly</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-6 space-x-reverse group">
+                            <div class="bg-gradient-to-r from-nebras-blue to-blue-400 p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                                <i class="fas fa-clock text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-nebras-dark text-lg">ساعات العمل</h4>
+                                <p class="text-gray-600">السبت - الخميس: 8:00 ص - 6:00 م</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-8">
+                        <h4 class="font-bold text-nebras-dark text-lg mb-6">تابعنا على وسائل التواصل</h4>
+                        <div class="flex space-x-4 space-x-reverse">
+                            <a href="#" class="bg-gradient-to-r from-blue-600 to-blue-500 text-white p-4 rounded-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-gradient-to-r from-sky-500 to-sky-400 text-white p-4 rounded-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-gradient-to-r from-blue-700 to-blue-600 text-white p-4 rounded-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-gradient-to-r from-pink-600 to-pink-500 text-white p-4 rounded-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20">
+                    <form class="space-y-6" id="contact-form">
+                        <div>
+                            <label for="name" class="block text-sm font-bold text-nebras-dark mb-3">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-nebras-violet focus:border-transparent transition-all duration-300 text-lg">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-bold text-nebras-dark mb-3">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-nebras-violet focus:border-transparent transition-all duration-300 text-lg">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-sm font-bold text-nebras-dark mb-3">الخدمة المطلوبة</label>
+                            <select id="service" name="service" 
+                                    class="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-nebras-violet focus:border-transparent transition-all duration-300 text-lg">
+                                <option value="">اختر الخدمة</option>
+                                <option value="sales-systems">أنظمة المبيعات</option>
+                                <option value="warehouse-systems">أنظمة المخازن</option>
+                                <option value="school-systems">أنظمة المدارس</option>
+                                <option value="automation">الأتمتة الذكية</option>
+                                <option value="web-design">تصميم المواقع</option>
+                                <option value="technical-support">الدعم التقني</option>
+                                <option value="consulting">استشارات تقنية</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-bold text-nebras-dark mb-3">الرسالة</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                      class="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-nebras-violet focus:border-transparent transition-all duration-300 text-lg"
+                                      placeholder="اكتب رسالتك هنا..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-nebras-violet to-nebras-blue text-white px-8 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3 space-x-reverse">
+                            <i class="fas fa-paper-plane text-xl"></i>
+                            <span>إرسال الرسالة</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-nebras-dark text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-12">
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4 space-x-reverse">
+                        <img src="images/nebras_tech_icon.png" alt="نبراس التقنية" class="h-12 w-12 rounded-xl">
+                        <h3 class="text-2xl font-bold">نبراس التقنية</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        شركة رائدة في تقديم الحلول البرمجية والمنظومات التقنية المتطورة في سبها، ليبيا. 
+                        نجمع بين التراث الأصيل والتكنولوجيا الحديثة.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-gray-300 hover:text-nebras-gold transition-colors text-xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-nebras-gold transition-colors text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-nebras-gold transition-colors text-xl">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-nebras-gold transition-colors text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-nebras-gold">خدماتنا</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#" class="hover:text-nebras-gold transition-colors">أنظمة المبيعات</a></li>
+                        <li><a href="#" class="hover:text-nebras-gold transition-colors">أنظمة المخازن</a></li>
+                        <li><a href="#" class="hover:text-nebras-gold transition-colors">أنظمة المدارس</a></li>
+                        <li><a href="#" class="hover:text-nebras-gold transition-colors">الأتمتة الذكية</a></li>
+                        <li><a href="#" class="hover:text-nebras-gold transition-colors">تصميم المواقع</a></li>
+                        <li><a href="#" class="hover:text-nebras-gold transition-colors">الدعم التقني</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-nebras-gold">منتجاتنا</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#" class="hover:text-nebras-gold transition-colors">نظام إدارة الأعمال</a></li>
+                        <li><a href="#" class="hover:text-nebras-gold transition-colors">نظام نقاط البيع</a></li>
+                        <li><a href="#" class="hover:text-nebras-gold transition-colors">نظام إدارة المدارس</a></li>
+                        <li><a href="#" class="hover:text-nebras-gold transition-colors">نظام إدارة المستشفيات</a></li>
+                        <li><a href="#" class="hover:text-nebras-gold transition-colors">نظام إدارة المخازن</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-nebras-gold">تواصل معنا</h4>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center space-x-3 space-x-reverse">
+                            <i class="fas fa-map-marker-alt text-nebras-gold"></i>
+                            <span>سبها، ليبيا</span>
+                        </li>
+                        <li class="flex items-center space-x-3 space-x-reverse">
+                            <i class="fas fa-phone text-nebras-gold"></i>
+                            <span dir="ltr">+218 XX XXX XXXX</span>
+                        </li>
+                        <li class="flex items-center space-x-3 space-x-reverse">
+                            <i class="fas fa-envelope text-nebras-gold"></i>
+                            <span dir="ltr">info@nebrastech.ly</span>
+                        </li>
+                        <li class="flex items-center space-x-3 space-x-reverse">
+                            <i class="fas fa-clock text-nebras-gold"></i>
+                            <span>السبت - الخميس: 8:00 ص - 6:00 م</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 نبراس التقنية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 left-8 bg-gradient-to-r from-nebras-violet to-nebras-blue text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 opacity-0 invisible z-50">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
